@@ -124,9 +124,6 @@ class apache::mod::worker (
       }
     }
     'gentoo': {
-      ::portage::makeconf { 'apache2_mpms':
-        content => 'worker',
-      }
     }
     default: {
       fail("Unsupported osfamily ${::osfamily}")
